@@ -1,6 +1,7 @@
 package com.estsoft.blog.article.dto;
 
 import com.estsoft.blog.comment.dto.CommentResponse;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
@@ -17,7 +18,9 @@ public class ArticleResponse {
     private long ArticleId;
     private String title;
     private String content;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm::ss") // 날짜 fomat 지정
     private LocalDateTime createdAt;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm::ss")
     private LocalDateTime updatedAt;
     private List<CommentResponse> comments;
 
