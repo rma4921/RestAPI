@@ -34,6 +34,10 @@ public class Article {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
+    // 주말 과제 5번을 풀기 위함 -> 나는 dto에 따로 설정함.
+//    @OneToMany(mappedBy = "article")
+//    private List<comment> commentList = new ArrayList<>();
+
     public Article(String title, String content) {
         this.title = title;
         this.content = content;
