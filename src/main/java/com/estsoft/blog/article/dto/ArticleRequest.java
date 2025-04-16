@@ -1,7 +1,7 @@
 package com.estsoft.blog.article.dto;
 
 import com.estsoft.blog.article.domain.Article;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -10,7 +10,7 @@ import lombok.Getter;
 public class ArticleRequest {
     private String title;
 
-    @JsonProperty("body")
+    @JsonAlias({"body", "content"})
     private String content;
 
     public Article toArticle() {
